@@ -8,7 +8,7 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
-      <Link href="./(tabs)/Home">
+      <Link href="./(tabs)/Tarjeta">
         <Text style={styles.title}>Iniciar Sesión</Text>
       </Link>
       {/* <LoginButton /> */}
