@@ -1,4 +1,4 @@
-import { CardDataType } from "@/assets/types/Card";
+import { CardDataType } from "@/types/Card";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign';
 

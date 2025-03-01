@@ -1,4 +1,4 @@
-import { LastUsedType } from "@/assets/types/Card";
+import { LastUsedType } from "@/types/Card";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 export default function CardLastUses({ lastUsesMocks }: { lastUsesMocks: LastUsedType[] }) {
