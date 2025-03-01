@@ -1,4 +1,4 @@
-import { CardDataType } from "../types/Card";
+import { CardDataType } from "@/types/Card";
 
 export const cardDataMock: CardDataType = {
     id: "0A-1B-2C-3D",
@@ -8,7 +8,7 @@ export const cardDataMock: CardDataType = {
     cardType: "Normal",
 };
 
-import { LastUsedType } from "../types/Card";
+import { LastUsedType } from "@/types/Card";
 
 export const lastUsesMocks: LastUsedType[] = [
     {

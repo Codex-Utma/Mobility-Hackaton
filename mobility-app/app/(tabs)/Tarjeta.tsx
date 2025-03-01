@@ -1,8 +1,8 @@
 import { View, StyleSheet } from "react-native";
 import CardData from "@/components/Mobile/Card/CardData";
 
-import { cardDataMock } from "@/assets/mocks/card";
-import { lastUsesMocks } from "@/assets/mocks/card";
+import { cardDataMock } from "@/mocks/card";
+import { lastUsesMocks } from "@/mocks/card";
 import CardLastUses from "@/components/Mobile/Card/CardLastUses";
 
 export default function Tarjeta() {
