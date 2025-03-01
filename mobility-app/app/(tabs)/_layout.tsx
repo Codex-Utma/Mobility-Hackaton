@@ -1,4 +1,6 @@
 import { Tabs } from "expo-router";
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function TabsLayout() {
     return (
@@ -8,20 +10,25 @@ export default function TabsLayout() {
                     headerShown: false
                 }}
             >
-                <Tabs.Screen name="Perfil" options={{
-                    title: "Perfil",
+                <Tabs.Screen name="Rutas" options={{
+                    title: "Rutas",
+                    tabBarIcon: ({ color }) => <FontAwesome5 name="route" size={24} color="black" />
                 }} />
                 <Tabs.Screen name="Actual" options={{
-                    title: "Actual"
+                    title: "Actual",
+                    tabBarIcon: ({ color }) => <FontAwesome5 name="bus" size={24} color="black" />
                 }} />
                 <Tabs.Screen name="Tarjeta" options={{
                     title: "Tarjeta",
-                }} />
-                <Tabs.Screen name="Rutas" options={{
-                    title: "Rutas"
+                    tabBarIcon: ({ color }) => <FontAwesome5 name="address-card" size={24} color="black" />
                 }} />
                 <Tabs.Screen name="Transbordos" options={{
-                    title: "Transbordos"
+                    title: "Transbordos",
+                    tabBarIcon: ({ color }) => <MaterialCommunityIcons name="bus-stop" size={24} color="black" />
+                }} />
+                <Tabs.Screen name="Perfil" options={{
+                    title: "Perfil",
+                    tabBarIcon: ({ color }) => <FontAwesome5 name="user-circle" size={24} color="black" />
                 }} />
             </Tabs>
         </>
