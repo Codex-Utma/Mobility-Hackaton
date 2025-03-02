@@ -7,7 +7,7 @@ export default function CurrentBus({currentData}: {currentData: CurrentDataType}
       <View style={styles.card}>
         <Text style={styles.title}>Te encuentras en la ruta: {currentData.route}</Text>
         <Text style={styles.detail}>Pago: ${currentData.cost}</Text>
-        <Text style={styles.detail}>Tomado a las: {currentData.time}</Text> {/* Hora mostrada */}
+        <Text style={styles.detail}>Tomado a las: {currentData.time}</Text>
       </View>
     </View>
   );
