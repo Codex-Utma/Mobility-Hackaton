@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function TabsLayout() {
     return (
@@ -24,7 +24,7 @@ export default function TabsLayout() {
                 }} />
                 <Tabs.Screen name="Transbordos" options={{
                     title: "Transbordos",
-                    tabBarIcon: ({ color }) => <MaterialCommunityIcons name="bus-stop" size={24} color="black" />
+                    tabBarIcon: ({ color }) => <MaterialIcons name="transfer-within-a-station" size={24} color="black" />
                 }} />
                 <Tabs.Screen name="Perfil" options={{
                     title: "Perfil",
