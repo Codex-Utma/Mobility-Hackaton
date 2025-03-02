@@ -1,4 +1,4 @@
-import { route_50 } from "./Ruta50";
+import { route_50 } from "./route_50";
 import { route_40 } from "./route_40";
 import { route_20 } from "./route_20";
 
