@@ -1,22 +1,42 @@
 import { bus_routes } from '@/assets/maps/bus_routes';
 
 import { FeatureCollection } from 'geojson';
-import MapView, { Geojson } from "react-native-maps";
+import MapView, { Geojson, Marker } from "react-native-maps";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { View, StyleSheet } from "react-native";
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import Entypo from '@expo/vector-icons/Entypo';
+
 import RouteSelector from '@/components/Mobile/Route/RouteSelector';
+
+import * as Location from 'expo-location';
 
 export default function Map() {
 
+  const [location, setLocation] = useState<Location.LocationObject | null>(null);
   const [route, setRoute] = useState<FeatureCollection | null>(null);
 
   const [origin, setOrigin] = useState({
     latitude: 21.883311,
     longitude: -102.292611
   });
+
+  useEffect(() => {
+    async function getCurrentLocation() {
+
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+    }
+
+    getCurrentLocation();
+  }, []);
 
   return (
     <View>
@@ -29,6 +49,20 @@ export default function Map() {
           longitudeDelta: 0.04
         }}
       >
+        {
+          location && (
+            <Marker
+              coordinate={{
+                latitude: location.coords.latitude,
+                longitude: location.coords.longitude
+              }}
+              title="Mi ubicación"
+              description="Estoy aquí"
+            >
+              <Entypo name="user" size={24} color="black" />
+            </Marker>
+          )
+        }
         {
           route && (
             <Geojson
