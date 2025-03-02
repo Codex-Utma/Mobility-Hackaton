@@ -1,12 +1,28 @@
 import { CardDataType } from "@/types/Card";
 
-export const cardDataMock: CardDataType = {
-    id: "0A-1B-2C-3D",
-    balance: 55.55,
-    lastDeposit: "2021-01-01",
-    lastUsed: "2021-01-01",
-    cardType: "Normal",
-};
+export const cardDataMock: CardDataType[] = [
+    {
+        id: "0A-1B-2C-3D",
+        balance: 55.55,
+        lastDeposit: "2021-01-01",
+        lastUsed: "2021-01-01",
+        cardType: "Normal",
+    },
+    {
+        id: "5045918",
+        balance: 100.00,
+        lastDeposit: "2021-01-01",
+        lastUsed: "2021-01-01",
+        cardType: "Preferencial",
+    },
+    {
+        id: "10044478",
+        balance: 200.00,
+        lastDeposit: "2021-01-01",
+        lastUsed: "2021-01-01",
+        cardType: "Normal",
+    }
+];
 
 import { LastUsedType } from "@/types/Card";
 

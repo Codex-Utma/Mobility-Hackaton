@@ -1,5 +1,5 @@
 export interface CardDataType {
-    id: `${string}-${string}-${string}-${string}`;
+    id: string;
     balance: number;
     lastDeposit: string;
     lastUsed: string;
